@@ -11,12 +11,16 @@ export const styles = StyleSheet.create({
   display: {
     flex: 1,
     width: "100%",
+    maxHeight: 150,
     justifyContent: "center",
     paddingHorizontal: 2,
-    paddingTop: 10,
+    paddingTop: 50,
+    paddingBottom: 50,
     marginTop: 50,
     fontSize: 40,
     textAlign: "right",
+    overflow: "hidden",
+    fontFamily: "monospace"
   },
   wrapper: {
     width: "100%",

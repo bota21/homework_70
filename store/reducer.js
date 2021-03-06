@@ -7,21 +7,21 @@ import {
 
 const initialState = {
   counter: 0,
+  initialValue: false
 };
 
 const reducer = (state = initialState, action) => {
-  if (state.counter === 0) {
-      return { ...state, counter: action.symbol };
-    } else if (state.counter > 1) {
-      return { ...state, counter: state.counter + action.symbol };
-    }
-
   switch (action.type) {
     case ADD_SYMBOL:
+      if (state.counter === 0) {
+        return { ...state, counter: action.symbol };
+      } else {
       return { ...state, counter: state.counter + action.symbol };
+      }
     case TOTAL_SUM:
       try {
-        return { ...state, counter: eval(state.counter) };
+        const sum = eval(state.counter);
+        return { ...state, counter: sum.toFixed(3) };
       } catch (e) {
         console.log(e);
       }

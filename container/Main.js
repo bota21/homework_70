@@ -12,7 +12,7 @@ import {
 const Main = () => {
   const counter = useSelector((state) => state.counter);
   const dispatch = useDispatch();
-
+  
   const showSymbol = (value) => {
     dispatch(addSymbol(value));
   };
