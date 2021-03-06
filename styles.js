@@ -56,7 +56,7 @@ export const styles = StyleSheet.create({
     marginVertical: 1,
   },
   symbolEqual: {
-    width: "49.4%",
+    width: "32.6%",
     height: 90,
     backgroundColor: "#FFA500",
     marginHorizontal: 1,
